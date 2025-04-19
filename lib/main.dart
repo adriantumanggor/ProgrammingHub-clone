@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'screens/pro_screen.dart';
 import 'screens/progress_screen.dart';
-import 'screens/module_screen.dart'; // Tambahkan ini
-import 'models/module.dart'; // Tambahkan ini
 import 'widgets/bottom_nav.dart';
 
 void main() {
@@ -15,15 +13,6 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: MainScreen(),
-      onGenerateRoute: (settings) {
-        if (settings.name == '/module') {
-          final module = settings.arguments as Module;
-          return MaterialPageRoute(
-            builder: (context) => ModuleScreen(module: module),
-          );
-        }
-        return null; // Jika tidak ada route yang cocok, return null
-      },
     );
   }
 }
@@ -53,24 +42,15 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'P',
+          'Geozmara',
           style: TextStyle(
-            color: Color(0xFF0024D6),
+            color: Colors.blueAccent,
             fontWeight: FontWeight.bold,
+            fontFamily: 'Voltaire-Frangela',
+            fontSize: 30,
           ),
         ),
         backgroundColor: Colors.white,
-        elevation: 0,
-        leading: IconButton(
-          icon: const Icon(Icons.menu, color: Colors.blue),
-          onPressed: () {},
-        ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.search, color: Colors.blue),
-            onPressed: () {},
-          ),
-        ],
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNav(

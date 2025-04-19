@@ -4,7 +4,7 @@ import '../models/module.dart';
 List<Course> dummyCourses = [
   Course(
     id: "course_001",
-    title: "Machine Learning",
+    title: "Ketika manusia mulai merekam ruang",
     description: "Belajar dasar-dasar Machine Learning dengan Python dan implementasi model sederhana.",
     imageUrl: "images/ml.jpg",
     module: Module(
@@ -29,12 +29,12 @@ List<Course> dummyCourses = [
 
   Course(
     id: "course_002",
-    title: "Networking",
+    title: "Kartografi kuno dan Penjelajahan dunia",
     description: "Memahami jaringan komputer, protokol komunikasi, dan teknologi yang digunakan dalam infrastruktur jaringan modern.",
     imageUrl: "images/network.jpg",
     module: Module(
       id: "module_002",
-      title: "Dasar-dasar Networking",
+      title: "Dasar-dasar",
       content: [
         "Networking adalah cara komputer berkomunikasi satu sama lain menggunakan berbagai teknologi dan protokol.",
         "Protokol jaringan seperti TCP/IP, HTTP, dan FTP sangat penting dalam pertukaran data antar perangkat dan sistem.",
@@ -54,7 +54,7 @@ List<Course> dummyCourses = [
 
   Course(
     id: "course_003",
-    title: "Ethical Hacking",
+    title: "Ilmu pengetahuan di balik Peta",
     description: "Belajar tentang keamanan siber dan bagaimana menguji serta memperkuat sistem dari ancaman cyber.",
     imageUrl: "images/hack.jpg",
     module: Module(
@@ -79,7 +79,103 @@ List<Course> dummyCourses = [
 
   Course(
     id: "course_004",
-    title: "Python ",
+    title: "Awal mula sistem informasi geografiz",
+    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
+    imageUrl: "images/python.png",
+    module: Module(
+      id: "module_004",
+      title: "Dasar-dasar Python",
+      content: [
+        "Python adalah bahasa pemrograman yang mudah dipelajari dan digunakan untuk berbagai keperluan seperti pengembangan web, data science, dan scripting.",
+        "Python memiliki sintaks yang sederhana dan banyak library yang membantu dalam pengolahan data, AI, dan keamanan siber.",
+        "Struktur dasar dalam Python mencakup variabel, tipe data, kontrol alur (if-else, loop), serta fungsi dan class.",
+        "Python juga mendukung paradigma pemrograman berorientasi objek (OOP) dan pemrograman fungsional untuk pengembangan aplikasi yang lebih kompleks.",
+        "Selamat! Anda telah menyelesaikan modul ini dan memahami dasar-dasar Python. Saatnya membuat proyek pertama Anda! 🎉",
+      ],
+      imageUrls: [
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python2.jpeg",
+      ],
+    ),
+  ),
+  Course(
+    id: "course_004",
+    title: "SIG modern dan perkembangannya",
+    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
+    imageUrl: "images/python.png",
+    module: Module(
+      id: "module_004",
+      title: "Dasar-dasar Python",
+      content: [
+        "Python adalah bahasa pemrograman yang mudah dipelajari dan digunakan untuk berbagai keperluan seperti pengembangan web, data science, dan scripting.",
+        "Python memiliki sintaks yang sederhana dan banyak library yang membantu dalam pengolahan data, AI, dan keamanan siber.",
+        "Struktur dasar dalam Python mencakup variabel, tipe data, kontrol alur (if-else, loop), serta fungsi dan class.",
+        "Python juga mendukung paradigma pemrograman berorientasi objek (OOP) dan pemrograman fungsional untuk pengembangan aplikasi yang lebih kompleks.",
+        "Selamat! Anda telah menyelesaikan modul ini dan memahami dasar-dasar Python. Saatnya membuat proyek pertama Anda! 🎉",
+      ],
+      imageUrls: [
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python2.jpeg",
+      ],
+    ),
+  ),
+  Course(
+    id: "course_004",
+    title: "AI dan masa depan SIG",
+    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
+    imageUrl: "images/python.png",
+    module: Module(
+      id: "module_004",
+      title: "Dasar-dasar Python",
+      content: [
+        "Python adalah bahasa pemrograman yang mudah dipelajari dan digunakan untuk berbagai keperluan seperti pengembangan web, data science, dan scripting.",
+        "Python memiliki sintaks yang sederhana dan banyak library yang membantu dalam pengolahan data, AI, dan keamanan siber.",
+        "Struktur dasar dalam Python mencakup variabel, tipe data, kontrol alur (if-else, loop), serta fungsi dan class.",
+        "Python juga mendukung paradigma pemrograman berorientasi objek (OOP) dan pemrograman fungsional untuk pengembangan aplikasi yang lebih kompleks.",
+        "Selamat! Anda telah menyelesaikan modul ini dan memahami dasar-dasar Python. Saatnya membuat proyek pertama Anda! 🎉",
+      ],
+      imageUrls: [
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python2.jpeg",
+      ],
+    ),
+  ),
+  Course(
+    id: "course_004",
+    title: "Tantangan dalam penggunaan SIG",
+    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
+    imageUrl: "images/python.png",
+    module: Module(
+      id: "module_004",
+      title: "Dasar-dasar Python",
+      content: [
+        "Python adalah bahasa pemrograman yang mudah dipelajari dan digunakan untuk berbagai keperluan seperti pengembangan web, data science, dan scripting.",
+        "Python memiliki sintaks yang sederhana dan banyak library yang membantu dalam pengolahan data, AI, dan keamanan siber.",
+        "Struktur dasar dalam Python mencakup variabel, tipe data, kontrol alur (if-else, loop), serta fungsi dan class.",
+        "Python juga mendukung paradigma pemrograman berorientasi objek (OOP) dan pemrograman fungsional untuk pengembangan aplikasi yang lebih kompleks.",
+        "Selamat! Anda telah menyelesaikan modul ini dan memahami dasar-dasar Python. Saatnya membuat proyek pertama Anda! 🎉",
+      ],
+      imageUrls: [
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python.png",
+        "images/python2.jpeg",
+        "images/python2.jpeg",
+      ],
+    ),
+  ),
+  Course(
+    id: "course_004",
+    title: "Merekam dunia yang terus berubah",
     description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
     imageUrl: "images/python.png",
     module: Module(

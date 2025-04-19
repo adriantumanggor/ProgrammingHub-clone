@@ -1,33 +1,95 @@
 import 'package:flutter/material.dart';
 import '../widgets/course_card.dart';
 import '../data/data_dummy.dart';
-import '../screens/module_screen.dart'; // Import ModuleScreen
+import '../screens/module_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  final PageController _pageController = PageController();
+  final List<String> bannerImages = [
+    'images/lets.png',
+    'images/lets.png',
+    'images/lets.png',
+  ];
+
+  int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    _pageController.addListener(() {
+      setState(() {
+        _currentPage = _pageController.page?.round() ?? 0;
+      });
+    });
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF9F9F9),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Header Banner
-            Container(
+            // Carousel Header Banner
+            SizedBox(
               height: 200,
-              width: double.infinity,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                image: const DecorationImage(
-                  image: AssetImage('images/lets.png'),
-                  fit: BoxFit.cover,
+              child: PageView.builder(
+                controller: _pageController,
+                itemCount: bannerImages.length,
+                itemBuilder: (context, index) {
+                  return Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 12),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      image: DecorationImage(
+                        image: AssetImage(bannerImages[index]),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+
+            // Page Indicator
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: List.generate(
+                  bannerImages.length,
+                      (index) => AnimatedContainer(
+                    duration: const Duration(milliseconds: 300),
+                    margin: const EdgeInsets.symmetric(horizontal: 4),
+                    width: _currentPage == index ? 12 : 8,
+                    height: _currentPage == index ? 12 : 8,
+                    decoration: BoxDecoration(
+                      color: _currentPage == index
+                          ? Colors.blueAccent
+                          : Colors.grey,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
                 ),
               ),
             ),
 
-            // Courses Section
+            // Courses Section Title
             const Padding(
-              padding: EdgeInsets.all(16),
+              padding: EdgeInsets.fromLTRB(16, 8, 16, 0),
               child: Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
@@ -41,7 +103,7 @@ class HomeScreen extends StatelessWidget {
             GridView.builder(
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.all(8),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 crossAxisSpacing: 10,
@@ -57,7 +119,8 @@ class HomeScreen extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ModuleScreen(module: course.module),
+                        builder: (context) =>
+                            ModuleScreen(module: course.module),
                       ),
                     );
                   },

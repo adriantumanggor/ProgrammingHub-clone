@@ -32,17 +32,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 8),
             // Progress Bar
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("Step ${currentStep + 1} of ${widget.module.content.length}",
-                    style: TextStyle(fontWeight: FontWeight.bold)),
-                Text("${(progress * 100).toInt()}%"),
-              ],
-            ),
-            SizedBox(height: 8),
             LinearProgressIndicator(
               value: progress,
               minHeight: 10,
@@ -54,7 +44,7 @@ class _ModuleScreenState extends State<ModuleScreen> {
             Center(
               child: Text(
                 widget.module.title, // Ambil title dari module
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'Voltaire-Frangela'),
                 textAlign: TextAlign.center,
               ),
             ),
