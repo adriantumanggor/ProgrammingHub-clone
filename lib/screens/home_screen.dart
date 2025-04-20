@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/course_card.dart';
 import '../data/data_dummy.dart';
-import '../screens/module_screen.dart';
+import '../screens/modules_screen.dart';  // Update import path
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -57,6 +57,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       image: DecorationImage(
                         image: AssetImage(bannerImages[index]),
                         fit: BoxFit.cover,
+                        onError: (exception, stackTrace) {
+                          print('Error loading image: $exception');
+                        },
                       ),
                     ),
                   );
@@ -104,13 +107,23 @@ class _HomeScreenState extends State<HomeScreen> {
                 return CourseCard(
                   course: course,
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            ModuleScreen(module: course.module),
-                      ),
-                    );
+                    // Check if course has modules before navigating
+                    if (course.modules.isNotEmpty) {
+                      // Navigate to the ModulesScreen with the entire course
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => ModulesScreen(course: course),
+                        ),
+                      );
+                    } else {
+                      // Show a message if there are no modules
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(
+                          content: Text('This course has no modules yet.'),
+                        ),
+                      );
+                    }
                   },
                 );
               },

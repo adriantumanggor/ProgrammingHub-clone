@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../widgets/course_card.dart';
 import '../data/data_dummy.dart';
-import '../screens/module_screen.dart'; // Import ModuleScreen
+import '../screens/modules_screen.dart'; // Import ModuleScreen
 
 class ProgressScreen extends StatelessWidget {
   @override
@@ -13,8 +13,6 @@ class ProgressScreen extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-
-
                 // Other Courses Grid
                 GridView.builder(
                   shrinkWrap: true,
@@ -32,12 +30,24 @@ class ProgressScreen extends StatelessWidget {
                     return CourseCard(
                       course: course,
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => ModuleScreen(module: course.module),
-                          ),
-                        );
+                        // Check if course has modules before navigating
+                        if (course.modules.isNotEmpty) {
+                          // Navigate to the ModulesScreen with the entire course
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  ModulesScreen(course: course),
+                            ),
+                          );
+                        } else {
+                          // Show a message if there are no modules
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text('This course has no modules yet.'),
+                            ),
+                          );
+                        }
                       },
                     );
                   },
