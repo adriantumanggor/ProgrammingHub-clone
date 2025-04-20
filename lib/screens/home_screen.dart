@@ -13,9 +13,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   final PageController _pageController = PageController();
   final List<String> bannerImages = [
-    'images/lets.png',
-    'images/lets.png',
-    'images/lets.png',
+    'images/gis.png',
+    'images/giss.jpg',
+    'images/gisss.jpg',
   ];
 
   int _currentPage = 0;
@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             // Carousel Header Banner
             SizedBox(
-              height: 200,
+              height: 270,
               child: PageView.builder(
                 controller: _pageController,
                 itemCount: bannerImages.length,
@@ -87,18 +87,6 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
 
-            // Courses Section Title
-            const Padding(
-              padding: EdgeInsets.fromLTRB(16, 8, 16, 0),
-              child: Align(
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  'Courses',
-                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-
             // GridView for courses
             GridView.builder(
               shrinkWrap: true,
@@ -106,8 +94,8 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.all(8),
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
+                crossAxisSpacing: 15,
+                mainAxisSpacing: 20,
                 childAspectRatio: 0.8,
               ),
               itemCount: dummyCourses.length,

@@ -5,7 +5,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_001",
     title: "Ketika manusia mulai merekam ruang",
-    description: "Belajar dasar-dasar Machine Learning dengan Python dan implementasi model sederhana.",
     imageUrl: "images/ml.jpg",
     module: Module(
       id: "module_001",
@@ -19,9 +18,7 @@ List<Course> dummyCourses = [
       ],
       imageUrls: [
         "images/ml.jpg",
-        "images/ml2.jpg",
         "images/ml.jpg",
-        "images/ml2.jpg",
         "images/ml2.jpg",
       ],
     ),
@@ -30,7 +27,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_002",
     title: "Kartografi kuno dan Penjelajahan dunia",
-    description: "Memahami jaringan komputer, protokol komunikasi, dan teknologi yang digunakan dalam infrastruktur jaringan modern.",
     imageUrl: "images/network.jpg",
     module: Module(
       id: "module_002",
@@ -55,7 +51,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_003",
     title: "Ilmu pengetahuan di balik Peta",
-    description: "Belajar tentang keamanan siber dan bagaimana menguji serta memperkuat sistem dari ancaman cyber.",
     imageUrl: "images/hack.jpg",
     module: Module(
       id: "module_003",
@@ -80,7 +75,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_004",
     title: "Awal mula sistem informasi geografiz",
-    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
     imageUrl: "images/python.png",
     module: Module(
       id: "module_004",
@@ -104,7 +98,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_004",
     title: "SIG modern dan perkembangannya",
-    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
     imageUrl: "images/python.png",
     module: Module(
       id: "module_004",
@@ -128,7 +121,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_004",
     title: "AI dan masa depan SIG",
-    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
     imageUrl: "images/python.png",
     module: Module(
       id: "module_004",
@@ -152,7 +144,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_004",
     title: "Tantangan dalam penggunaan SIG",
-    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
     imageUrl: "images/python.png",
     module: Module(
       id: "module_004",
@@ -176,7 +167,6 @@ List<Course> dummyCourses = [
   Course(
     id: "course_004",
     title: "Merekam dunia yang terus berubah",
-    description: "Mempelajari dasar-dasar pemrograman dengan Python dan penerapannya dalam berbagai bidang seperti data science dan automation.",
     imageUrl: "images/python.png",
     module: Module(
       id: "module_004",

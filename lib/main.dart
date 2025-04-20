@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
-import 'screens/pro_screen.dart';
+import 'screens/about.dart';
 import 'screens/progress_screen.dart';
 import 'widgets/bottom_nav.dart';
 
@@ -28,7 +28,7 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _pages = [
     HomeScreen(),
     ProgressScreen(),
-    ProScreen(),
+    AboutScreen(),
   ];
 
   void _onItemTapped(int index) {
@@ -42,15 +42,16 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'Geozmara',
+          'G e o s m a r a',
           style: TextStyle(
-            color: Colors.blueAccent,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Voltaire-Frangela',
+            color: Colors.blue,
+            fontFamily: 'Cinzel',
+            fontWeight: FontWeight.w900,
             fontSize: 30,
           ),
         ),
         backgroundColor: Colors.white,
+        centerTitle: true,
       ),
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNav(

@@ -26,8 +26,8 @@ class BottomNav extends StatelessWidget {
           label: 'Progress',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.workspace_premium),
-          label: 'Pro',
+          icon: Icon(Icons.info), // Ganti ikon Pro jadi info
+          label: 'Tentang',   // Ganti label jadi Tentang Kami
         ),
       ],
     );
