@@ -6,15 +6,13 @@ List<Course> dummyCourses = [
   Course(
     id: 1,
     title: "Ketika Manusia Mulai Merekam Ruang",
-    imageUrl: "http://localhost:3000/gis.jpg",
+    imageUrl: "http://10.0.2.2:3000/giss.jpg",
     modules: [
       Module(
         id: 1,
         title: "Navigasi Alamiah",
         imageUrls: [
-          "http://localhost:3000/gis.jpg",
-          "http://localhost:3000/gis.jpg",
-          "http://localhost:3000/gis.jpg",
+          "http://10.0.2.2:3000/giss.jpg",
         ],
         contents: [
           Content(
@@ -30,7 +28,9 @@ List<Course> dummyCourses = [
       Module(
         id: 2,
         title: "Kartografi Prasejarah",
-        imageUrls: [],
+        imageUrls: [
+          "http://10.0.2.2:3000/giss.jpg",
+        ],
         contents: [
           Content(
               id: 3,
@@ -50,20 +50,21 @@ List<Course> dummyCourses = [
         ],
       ),
     ],
+    finished: false,
   ),
 
   Course(
     id: 2,
     title: "Kartografi kuno dan Penjelajahan dunia",
-    imageUrl: "http://localhost:3000/network.jpg",
+    imageUrl: "http://10.0.2.2:3000/network.jpg",
     modules: [
       Module(
         id: 4,
         title: "Dasar-dasar Kartografi",
         imageUrls: [
-          "http://localhost:3000/network.jpg",
-          "http://localhost:3000/network2.jpg",
-          "http://localhost:3000/network.jpg",
+          "http://10.0.2.2:3000/network.jpg",
+          "http://10.0.2.2:3000/network2.jpg",
+          "http://10.0.2.2:3000/network.jpg",
         ],
         contents: [
           Content(
@@ -92,8 +93,8 @@ List<Course> dummyCourses = [
         id: 5,
         title: "Penjelajahan Dunia",
         imageUrls: [
-          "http://localhost:3000/network2.jpg",
-          "http://localhost:3000/network.jpg",
+          "http://10.0.2.2:3000/network2.jpg",
+          "http://10.0.2.2:3000/network.jpg",
         ],
         contents: [
           Content(
@@ -115,20 +116,21 @@ List<Course> dummyCourses = [
         ],
       ),
     ],
+    finished: false,
   ),
 
   Course(
     id: 3,
     title: "Ilmu pengetahuan di balik Peta",
-    imageUrl: "http://localhost:3000/hack.jpg",
+    imageUrl: "http://10.0.2.2:3000/hack.jpg",
     modules: [
       Module(
         id: 6,
         title: "Pengenalan Ethical Hacking",
         imageUrls: [
-          "http://localhost:3000/hack.jpg",
-          "http://localhost:3000/hack2.jpg",
-          "http://localhost:3000/hack.jpg",
+          "http://10.0.2.2:3000/hack.jpg",
+          "http://10.0.2.2:3000/hack2.jpg",
+          "http://10.0.2.2:3000/hack.jpg",
         ],
         contents: [
           Content(
@@ -157,8 +159,8 @@ List<Course> dummyCourses = [
         id: 7,
         title: "Keamanan Jaringan",
         imageUrls: [
-          "http://localhost:3000/hack2.jpg",
-          "http://localhost:3000/hack.jpg",
+          "http://10.0.2.2:3000/hack2.jpg",
+          "http://10.0.2.2:3000/hack.jpg",
         ],
         contents: [
           Content(
@@ -185,15 +187,15 @@ List<Course> dummyCourses = [
   Course(
     id: 4,
     title: "Awal mula sistem informasi geografis",
-    imageUrl: "http://localhost:3000/python.png",
+    imageUrl: "http://10.0.2.2:3000/python.png",
     modules: [
       Module(
         id: 8,
         title: "Dasar-dasar Python",
         imageUrls: [
-          "http://localhost:3000/python.png",
-          "http://localhost:3000/python2.jpeg",
-          "http://localhost:3000/python.png",
+          "http://10.0.2.2:3000/python.png",
+          "http://10.0.2.2:3000/python2.jpeg",
+          "http://10.0.2.2:3000/python.png",
         ],
         contents: [
           Content(
@@ -222,8 +224,8 @@ List<Course> dummyCourses = [
         id: 9,
         title: "Pengolahan Data Geospasial",
         imageUrls: [
-          "http://localhost:3000/python2.jpeg",
-          "http://localhost:3000/python.png",
+          "http://10.0.2.2:3000/python2.jpeg",
+          "http://10.0.2.2:3000/python.png",
         ],
         contents: [
           Content(
